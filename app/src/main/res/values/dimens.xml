@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="labelTextSie">24sp</dimen>
+    <dimen name="commonPadding">16dp</dimen>
+    <dimen name="editTextHeight">56dp</dimen>
+    <dimen name="navBarHeight">50dp</dimen>
+    <dimen name="listPadding">16dp</dimen>
+</resources>

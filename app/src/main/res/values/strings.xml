@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="emailLabel">Email Address</string>
+    <string name="passwordLabel">Password</string>
+    <string name="emailHint">Email Address</string>
+    <string name="passwordHint">Password</string>
+    <string name="signIn">Sign In</string>
+    <string name="sginUp">Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcomeText">Welcome</string>
+    <string name="welcomeTextDetails">Thank for using our application and hope that you will enjoy it.</string>
+    <string name="instructions">Instructions</string>
+    <string name="shoesLIst">Shoes List</string>
+    <string name="instructionsLabel">Instructions</string>
+    <string name="instructionDetails">Click on the following button to go to the shoes list</string>
+    <string name="showShowDetailsButton">show Show Details</string>
+    <string name="shoeDetailsList">Shoes List\n</string>
+    <string name="shoeDetail">Shoe Details</string>
+
+    <string name="shoeNameLabel">Shoe Name</string>
+    <string name="shoeDescriptionLabel">Shoe Description</string>
+    <string name="shoeCompanyLabel">Shoe Company</string>
+    <string name="shoeSizeLabel">Shoe Size</string>
+
+    <string name="cnacelButton">Cancel</string>
+    <string name="saveButton">Save</string>
+</resources>
