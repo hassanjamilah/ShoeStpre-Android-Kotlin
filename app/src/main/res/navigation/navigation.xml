@@ -43,9 +43,6 @@
         android:id="@+id/shoeDetailFragment"
         android:name="com.udacity.shoestore.ShoeDetailFragment"
         android:label="ShoeDetailFragment" >
-        <argument
-            android:name="selectedShoe"
-            app:argType="com.udacity.shoestore.models.Shoe" />
         <action
             android:id="@+id/action_shoeDetailFragment_to_shoesListFragment"
             app:destination="@id/shoesListFragment"

@@ -20,7 +20,6 @@ import timber.log.Timber
  * create an instance of this fragment.
  */
 class ShoeDetailFragment : Fragment() {
-    lateinit var selectedShoe: Shoe
     lateinit var binding: FragmentShoeDetailBinding
     private val viewModel: ShoesViewModel by activityViewModels()
 
@@ -31,14 +30,15 @@ class ShoeDetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
 //        viewModel = ViewModelProvider(this).get(ShoesViewModel::class.java)
 
-        val args = ShoeDetailFragmentArgs.fromBundle(requireArguments())
-        selectedShoe = args.selectedShoe
-        Timber.i("The shoe in details screen is: ${selectedShoe}")
+        binding.viewModel = viewModel
 
-        binding.shoeNameTextField.setText(selectedShoe.name)
-        binding.shoeCompanyTextField.setText(selectedShoe.company)
-        binding.shoeSizeTextField.setText(selectedShoe.size.toString())
-        binding.shoeDescriptionTextField.setText(selectedShoe.description)
+
+        Timber.i("The shoe in details screen is: ${viewModel.selectedShoe.value}")
+
+//        binding.shoeNameTextField.setText(selectedShoe.name)
+//        binding.shoeCompanyTextField.setText(selectedShoe.company)
+//        binding.shoeSizeTextField.setText(selectedShoe.size.toString())
+//        binding.shoeDescriptionTextField.setText(selectedShoe.description)
 
 
         binding.cancelButton.setOnClickListener {

@@ -1,7 +1,10 @@
 package com.udacity.shoestore
 
+import android.text.format.DateUtils
+import android.view.animation.Transformation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
 
@@ -9,6 +12,10 @@ class ShoesViewModel: ViewModel() {
     private val _shoesList = MutableLiveData<List<Shoe>>()
     val shoesList: LiveData<List<Shoe>>
         get() = _shoesList
+
+    private val _selectedShoe = MutableLiveData<Shoe>()
+    val selectedShoe: LiveData<Shoe>
+        get() = _selectedShoe
 
 
     init {
@@ -22,5 +29,9 @@ class ShoesViewModel: ViewModel() {
         val updatedList = _shoesList.value?.toMutableList() ?: mutableListOf() // Create new list
         updatedList.add(shoe)
         _shoesList.value = updatedList
+    }
+
+    fun setSelectedShoe(shoe: Shoe) {
+        _selectedShoe.value = shoe
     }
 }

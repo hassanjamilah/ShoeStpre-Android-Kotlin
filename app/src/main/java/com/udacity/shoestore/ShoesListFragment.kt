@@ -23,10 +23,6 @@ import com.udacity.shoestore.databinding.FragmentShoesListBinding
 import com.udacity.shoestore.models.Shoe
 import timber.log.Timber
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -36,7 +32,7 @@ private const val ARG_PARAM2 = "param2"
 class ShoesListFragment : Fragment() {
 
     val viewModel: ShoesViewModel by activityViewModels()
-    lateinit var selectedShoe: Shoe
+
 
     lateinit var binding: FragmentShoesListBinding
 
@@ -53,10 +49,7 @@ class ShoesListFragment : Fragment() {
         binding.shoeDetailButton.alpha = 0.50f
 
         binding.shoeDetailButton.setOnClickListener {
-            if (selectedShoe == null) {
-
-            }
-            it.findNavController().navigate(ShoesListFragmentDirections.actionShoesListFragmentToShoeDetailFragment(selectedShoe))
+            it.findNavController().navigate(ShoesListFragmentDirections.actionShoesListFragmentToShoeDetailFragment())
         }
         setHasOptionsMenu(true)
         Timber.i("The shoes list are: ${viewModel.shoesList.value}")
@@ -83,9 +76,9 @@ class ShoesListFragment : Fragment() {
                     it.setBackgroundColor(resources.getColor(R.color.design_default_color_on_primary))
                 }
                 textView.setBackgroundColor(resources.getColor(R.color.colorAccent))
-                selectedShoe = shoe
+                viewModel.setSelectedShoe(shoe)
 
-                if (::selectedShoe.isInitialized) {
+                if (viewModel.selectedShoe.value != null) {
                     binding.shoeDetailButton.isEnabled = true
                     binding.shoeDetailButton.alpha = 1.0f
                 }
