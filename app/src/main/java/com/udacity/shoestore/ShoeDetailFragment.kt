@@ -32,28 +32,14 @@ class ShoeDetailFragment : Fragment() {
 
         binding.viewModel = viewModel
 
-
         Timber.i("The shoe in details screen is: ${viewModel.selectedShoe.value}")
-
-//        binding.shoeNameTextField.setText(selectedShoe.name)
-//        binding.shoeCompanyTextField.setText(selectedShoe.company)
-//        binding.shoeSizeTextField.setText(selectedShoe.size.toString())
-//        binding.shoeDescriptionTextField.setText(selectedShoe.description)
-
 
         binding.cancelButton.setOnClickListener {
             findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoesListFragment())
         }
 
         binding.saveButton.setOnClickListener {
-            val newShoeName: String = binding.shoeNameTextField.text.toString()
-            val newShoeDescription = binding.shoeDescriptionTextField.text.toString()
-            val newShoeCompany = binding.shoeCompanyTextField.text.toString()
-            val newShoeSize = binding.shoeSizeTextField.text.toString().toDouble()
-            val newShoe = Shoe(newShoeName, newShoeSize, newShoeCompany, newShoeDescription)
-            viewModel.addNewShoe(newShoe)
-            Timber.i("The new shoes: ${viewModel.shoesList.value?.size}")
-
+            viewModel.saveShoe()
             findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoesListFragment())
         }
 
