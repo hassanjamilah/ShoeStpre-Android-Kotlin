@@ -9,8 +9,8 @@
         android:layout_height="match_parent"
         tools:context=".WelcomeFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-
+        
+<!--Constraint layout here will help to add more view in the future easily and align them if they became more complex -->
         <TextView
             android:id="@+id/textView2"
             style="@style/labelStyle"

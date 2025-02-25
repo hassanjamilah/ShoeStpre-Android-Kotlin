@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     >
 
+<!--    ConstraintLayout will help to keep the UI flexible -->
+<!--    Here using this layout will help to make the views aligned to each other-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

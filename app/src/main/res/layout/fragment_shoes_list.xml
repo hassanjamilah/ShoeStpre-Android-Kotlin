@@ -30,6 +30,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0">
 
+<!--            Using Linear layout here because it is a simple UI -->
+<!--            Also linearLayout here will work as a view group to add more view programitically -->
             <LinearLayout
                 android:id="@+id/shoesMainView"
                 android:layout_width="match_parent"

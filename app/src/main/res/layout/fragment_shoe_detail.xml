@@ -10,6 +10,8 @@
             type="com.udacity.shoestore.ShoesViewModel" />
     </data>
 
+<!--    Using constraintLayout here -->
+<!--    ConstraintLayout will help here to simplify laying out the complex views together -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
